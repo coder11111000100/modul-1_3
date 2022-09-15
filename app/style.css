@@ -88,7 +88,7 @@ body{
 
 .header_type_burger{ 
     order: -1;
-    background-image: url("icons/icon.png") ;
+    background-image: url("icons/burger-menu.png") ;
     background-repeat: no-repeat;
     background-position: 50%;
  }
@@ -215,6 +215,13 @@ font-size: 14px;
 
 /* ========= menu (end) ================= */
 
+.main__detailed{
+    margin-left: 32px;
+}
+.main__container{
+    max-width: fit-content;
+}
+
 .main{
 padding: 0;
 margin: 0;
@@ -229,17 +236,20 @@ margin-bottom:0 ;
 
 .main__title::before{
     content: '';
-    position: absolute;
-    left: -4px;
+    position: relative;
+    top: 12.5%;
+    left: -17px;
     display: inline-block;
     height: 40px;
-    width: 8px;
-    border-radius:  4px ;
+    width: 4px;
+    border-top-right-radius: 4px ;
+    border-bottom-right-radius: 4px ;
     background-color: rgba(65, 246, 215, 1);
 }
 
 .main__list{
     display: flex;
+    overflow: hidden;
     justify-content:space-between;
     list-style-type: none;
     padding: 0;
@@ -269,9 +279,6 @@ margin-bottom:0 ;
 }
 
 /* ======== button (start)============ */
-.main__conteiner {
-    margin-left: 32px;
-}
 
 .main__detailed_btn{
    position: relative;
@@ -289,8 +296,8 @@ margin-bottom:0 ;
     width: 8px;
     height: 11px;
     position: relative;
-    left: -47px;
-    top: -36px;
+    left: -50px;
+    top: -40px;
     background-image:  url("icons/point.png");
     background-repeat: no-repeat;
     background-position: 50%;
@@ -322,30 +329,23 @@ background-size: 120%;
 
 /* ======== button (end)============ */
 
-
-/* .main__description-detailed::before{
-   content: url("icons/point.png");
-   display: inline-block;
-   position: relative;
-   left: -24px;
-   bottom: 2px;
-   cursor: pointer;
-} */
-
 .main__article{
     display: flex;
     flex-wrap: wrap;
 }
 .main__group_description{
-    flex: 1 1 50%;
+    flex: 0 1 50%;
 }
 
 .main__images{
-    flex: 1 1 50%;
+    flex: 0 1 50%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .main__description{
     padding: 0 16px;
+    padding-right: 48px;
     min-width: 321px;
 }
 .main__description-detailed{
@@ -353,12 +353,16 @@ background-size: 120%;
 }
 
 /* ===============  @media ============ */
- @media screen and (max-width: 321px) {
+
+@media screen and (max-width: 767px) {
+    .header__item:nth-child(n+5){
+        display: none;
+    }
     .main__images{
-        margin-top: 16px;
-        flex: 0 100%;
-        height: auto;
-        border-radius: 5px;
+        margin-top: 0;
+        flex: 0 320px;
+        margin-right:  100px;
+        align-self: flex-start;
     }
     .header_logo::after {
         content: '';
@@ -368,33 +372,22 @@ background-size: 120%;
         height: 32px;
         width: 2px;
         background-color:#EAEAEA;
-    }   
-} 
-
-@media screen and (max-width: 769px) and (min-width: 321px) {
-    .main__images{
-        margin-top: 16px;
-        flex: 0 360px;
-        height: auto;
-        border-radius: 5px;
-    }
-    .header_logo::before {
-        content: '';
-        margin-right: 5px;
-        margin-right: 17px;
-        display:block;
-        height: 32px;
-        width: 2px;
-        background-color:#EAEAEA;
     } 
 }
 
-@media screen and (min-width: 769px) {
+ @media screen and (min-width: 768px) and (max-width: 1120px) {
+    .main__article{
+        margin-top: 16px;
+    }
+    .main__description{
+        padding: 0 24px;
+        padding-right: 24px;
+    }
   .main__images{
     margin-top: 16px;
-    flex: 0 360px;
-    height: auto;
-    border-radius: 5px;
+    margin-right:  24px;
+    flex: 0 0 360px;
+    align-self: flex-start;
     }
   .header__item:nth-child(n+3):nth-child(-n+4){
     order: 1;
@@ -405,6 +398,15 @@ background-size: 120%;
   .header__item:nth-child(5){
     margin-left: auto;
   }
+  .header_logo::before {
+    content: '';
+    margin-right: 5px;
+    margin-right: 17px;
+    display:block;
+    height: 32px;
+    width: 2px;
+    background-color:#EAEAEA;
+} 
   .header__item:nth-child(7)::after{
     content: '';
     position: relative;
@@ -414,11 +416,23 @@ background-size: 120%;
     width: 2px;
     background-color:#EAEAEA;
   }
-} 
+}  
 
  @media screen and (min-width: 1120px) {
+    .main__article{
+        margin-top: 0;
+    }
+    .main__list{
+        flex-wrap: wrap ;
+   }
+    .main__container{
+        margin: 0 auto;
+        max-width: 1120px;
+    }
+
     .main__images{
         flex: 0 532px;
+        margin-top: 8px;
         height: auto;
         border-radius: 5px;
     }
@@ -429,7 +443,8 @@ background-size: 120%;
     display: none;
     }
 } 
- @media screen and (max-width: 1120px) {
+
+ @media screen and (max-width: 1119px) {
      .main__navigation-service{
         display: none;
     }
