@@ -299,8 +299,8 @@ margin-bottom:0 ;
    position: relative;
    width: 20px;
    height: 20px;
-   left: -27px;
-   bottom: 35px;
+   left: -22px;
+   bottom: 40px;
    /* overflow: hidden; */
    opacity: 0;
    /* clip: rect(0, 0, 0, 0 ); */
@@ -312,7 +312,7 @@ margin-bottom:0 ;
     height: 11px;
     position: relative;
     left: -40px;
-    top: -32px;
+    top: -34px;
     background-image:  url("icons/point.png");
     background-repeat: no-repeat;
     background-position: 50%;
@@ -370,6 +370,7 @@ background-size: 120%;
 /* ===============  @media ============ */
 
 @media screen and (max-width: 767px) {
+
     .main__group_description{
         flex: 1 100%;
     }
@@ -379,8 +380,6 @@ background-size: 120%;
     .main__images{
         margin-top: 0;
         flex: 1 100%;
-        margin-right:  100px;
-        align-self: flex-start;
     }
     .header_logo::after {
         content: '';
