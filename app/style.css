@@ -268,6 +268,11 @@ margin-bottom:0 ;
     -ms-overflow-style: none;
   } 
 
+  @-moz-document url-prefix() {
+    .main__list {
+      scrollbar-width: none;
+    }
+  }
 
 .main__item{
     flex: 0 0 auto;
