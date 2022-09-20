@@ -156,7 +156,7 @@ font-size: 14px;
     font-size: 16px;
 }
 
-.main__title2_font{
+.main__button_font{
     font-family: 'TTLakes-Medium';
     color: rgba(27, 28, 33, 1);
     font-size: 16px;
@@ -296,28 +296,24 @@ margin-bottom:0 ;
 /* ======== button (start)============ */
 
 .main__detailed_btn{
-   position: relative;
-   width: 20px;
-   height: 20px;
-   left: -22px;
-   bottom: 40px;
-   /* overflow: hidden; */
-   opacity: 0;
-   /* clip: rect(0, 0, 0, 0 ); */
+margin-left: 16px;
+ cursor: pointer;
+ background: none;
+ border: none;
 }
 
-.main__detailed_btn + span {
+.main__detailed_btn::before {
+    content: '';
     display: inline-block;
     width: 8px;
     height: 11px;
     position: relative;
-    left: -40px;
-    top: -34px;
+    left: -8px;
     background-image:  url("icons/point.png");
     background-repeat: no-repeat;
     background-position: 50%;
-    cursor: pointer;
-    pointer-events: none;
+    vertical-align: middle;
+    /* pointer-events: none;  */
 }
 
 
@@ -388,7 +384,7 @@ background-size: 120%;
         display:block;
         height: 32px;
         width: 2px;
-        background-color:#EAEAEA;
+        background-color:#16a085;
     } 
 }
 
