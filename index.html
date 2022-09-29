@@ -6,66 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>burger-menu</title>
 </head>
 
 <body>
-    <header class="header">
-
-        <nav class="header__main-navigation">
-            <ul class="header__list">
-                <li class="header__item  header_logo"><img src="./icons/Group.png" alt="logo"></li>
-                <li tabindex="2" class="header__item header_type_burger"></li>
-                <li tabindex="3" class="header__item"><a href="#!"></a></li>
-                <li tabindex="4" class="header__item"><a href="#!"></a></li>
-                <li tabindex="5" class="header__item"><a href="#!"></a></li>
-                <li tabindex="6" class="header__item"><a href="#!"></a></li>
-                <li tabindex="7" class="header__item"><a href="#!"></a></li>
+    <div class="navigation">
+        <nav class=" navigation_position-direct_column">
+            <ul class="navigation__list">
+                <li tabindex="1" class="navigation__item"><a class="navigation__click" href="#!"></a></li>
+                <li class="navigation__item_logo"><img src="./icons/Group.png" alt="logo"></li>
+                <li tabindex="2" class="navigation__item"><a class="navigation__click" href="#!"></a></li>
+            </ul>
+            <ul class="navigation__list_directions_top-bottom navigation__list_font">
+                <li tabindex="3" class="navigation__text ">Ремонт техники</li>
+                <li tabindex="4" class="navigation__text">Услуги и сервисы</li>
+                <li tabindex="5" class="navigation__text">Корпоративным клиентам</li>
+                <li tabindex="6" class="navigation__text">Продавцам техники</li>
+                <li tabindex="7" class="navigation__text">Партнерам</li>
+                <li tabindex="8" class="navigation__text">Производителям</li>
+                <li tabindex="9" class="navigation__text">Наши сервисные центры</li>
+                <li tabindex="10" class="navigation__text">Контакты</li>
+            </ul>
+            <ul class="navigation__list-two">
+                <li tabindex="11" class="navigation__item-two"><a class="navigation__click" href="#!"></a></li>
+                <li tabindex="12" class="navigation__item-two"><a class="navigation__click" href="#!"></a></li>
+                <li tabindex="13" class="navigation__item-two"><a class="navigation__click" href="#!"></a></li>
             </ul>
         </nav>
-    </header>
-
-    <main class="main">
-        <div class="main__container">
-            <div class="main__wrapper">
-                <h1 class="main__title main__title_font">Услуги и сервисы</h1>
-                <nav class="main__navigation-service">
-                    <ul class="main__navigation-list">
-                        <li tabindex="1" class="main__navigation-item">Оставить заявку<a href="#!"
-                                class="main__navigation-link-service"></a></li>
-                        <li tabindex="2" class="main__navigation-item">Статус ремонта<a href="#!"
-                                class="main__navigation-link-search"></a></li>
-                    </ul>
-                </nav>
-            </div>
-            <nav class="main__navigation">
-                <ul class="main__list  main__list_font">
-                    <li tabindex="8" class="main__item">Ремонтируемые устройства</li>
-                    <li tabindex="9" class="main__item">Дополнительные услуги</li>
-                    <li tabindex="10" class="main__item">Цены на услуги</li>
-                    <li tabindex="11" class="main__item">Адреса сервисных центров</li>
-                    <li tabindex="12" class="main__item">Специальные цены</li>
-                    <li tabindex="12" class="main__item">Отзывы</li>
-                </ul>
-            </nav>
-            <div class="main__article">
-                <div class="main__group_description">
-                    <div class="main__description main__description_font">
-                        <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-                            Только у
-                            нас вы можете
-                            отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                        <button class="main__detailed_btn main__button_font">
-                            Читать далее
-                        </button>
-                    </div>
-                </div>
-                <img class="main__images" src="./images/cps-company.jpg" alt="CPS-Company">
-            </div>
-        </div>
-    </main>
-
-
+        <footer class="info info_font">
+            <p class="info__item">mail@cps.com</p>
+            <p class="info__item info_font_bold">8 800 890 8900</p>
+            <p class="info__item"> <span class="info_ru">RU</span> <span class="info_en">EN</span> <span
+                    class="info_ch">CH</span></p>
+        </footer>
+    </div>
 </body>
 
 </html>
