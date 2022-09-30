@@ -215,6 +215,10 @@ margin-bottom: 32px;
     transition: 1s;
    }
 
+   .info__item-to{
+    color: #1B1C21;
+   }    
+
 /* 
 const body = document.querySelector("body");
 
