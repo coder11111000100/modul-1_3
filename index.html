@@ -5,44 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goods</title>
     <link rel="stylesheet" href="style.css">
-    <title>burger-menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
 </head>
 
 <body>
-    <div class="navigation">
-        <nav class=" navigation_position-direct_column">
-            <ul class="navigation__list">
-                <li tabindex="1" class="navigation__item"><button class="navigation__click"></button></li>
-                <li class="navigation__item_logo"><img src="./icons/Group.png" alt="logo"></li>
-                <li tabindex="2" class="navigation__item"><button class="navigation__click"></button></li>
+    <section class="main-devices">
+        <div class="main-devices__block ">
+            <h1 class="main-devices__title main-devices__title_font">Ремонт техники различных брендов</h1>
+        </div>
+        <div data-mobile="false" class="main-devices__wrapper  swiper ">
+            <ul class="main-devices__list  swiper-wrapper">
+
             </ul>
-            <ul class="navigation__list_directions_top-bottom navigation__list_font">
-                <li tabindex="3" class="navigation__text ">Ремонт техники</li>
-                <li tabindex="4" class="navigation__text">Услуги и сервисы</li>
-                <li tabindex="5" class="navigation__text">Корпоративным клиентам</li>
-                <li tabindex="6" class="navigation__text">Продавцам техники</li>
-                <li tabindex="7" class="navigation__text">Партнерам</li>
-                <li tabindex="8" class="navigation__text">Производителям</li>
-                <li tabindex="9" class="navigation__text">Наши сервисные центры</li>
-                <li tabindex="10" class="navigation__text">Контакты</li>
-            </ul>
-            <ul class="navigation__list-two">
-                <li tabindex="11" class="navigation__item-two"><button class="navigation__click"></button>
-                </li>
-                <li tabindex="12" class="navigation__item-two"><button class="navigation__click"></button>
-                </li>
-                <li tabindex="13" class="navigation__item-two"><button class="navigation__click"></button>
-                </li>
-            </ul>
-        </nav>
-        <footer class="info info_font">
-            <p class="info__item"><a class="info__item-to" href="mailto:mail@cps.com">mail@cps.com</a></p>
-            <p class="info__item info_font_bold"><a class="info__item-to" href="tel:88008908900">8 800 890 8900</a></p>
-            <p class="info__item"> <span class="info_ru">RU</span> <span class="info_en">EN</span> <span
-                    class="info_ch">CH</span></p>
-        </footer>
-    </div>
+            <div class="swiper-pagination"></div>
+            <div class="main-devices__hidden "><span tabindex="1"
+                    class="main-devices__hidden-text main-devices__hidden_font">Скрыть</span></div>
+        </div>
+
+    </section>
+
+    <template id="template-list-item">
+        <li class="main-devices__item swiper-slide"><a href="#!" class="main-devices_href"></a></li>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+
+
 </body>
 
 </html>
