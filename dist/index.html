@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goods</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <section class="main-devices">
+        <div class="main-devices__block ">
+            <h1 class="main-devices__title main-devices__title_font">Ремонт техники различных брендов</h1>
+        </div>
+        <div data-mobile="false" class="main-devices__wrapper  swiper ">
+            <ul class="main-devices__list  swiper-wrapper">
+
+            </ul>
+            <div class="swiper-pagination"></div>
+            <div class="main-devices__hidden "><span tabindex="1"
+                    class="main-devices__hidden-text main-devices__hidden_font">Скрыть</span></div>
+        </div>
+
+    </section>
+
+    <template id="template-list-item">
+        <li class="main-devices__item swiper-slide"><a href="#!" class="main-devices_href"></a></li>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+
+
+</body>
+
+</html>
