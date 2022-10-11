@@ -1,14 +1,17 @@
 {
   "name": "1_5",
+  "homepage": "https://coder11111000100.io/modul-1_3/tree/module1_5",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2"
   },
   "dependencies": {
