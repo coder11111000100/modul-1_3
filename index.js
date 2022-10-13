@@ -33,20 +33,20 @@ const handlerAnimation = (e) => {
         e.target.parentNode.classList.remove("main-devices__hidden_animate-back") 
         e.target.parentNode.classList.add("main-devices__hidden_animate-to")
         setTimeout(function(){
-            e.target.textContent = "Показать все"
+            e.target.textContent ="Скрыть"
             // document.documentElement.style.cssText = "--angle: 45deg";
-            document.documentElement.style.setProperty('--angle', '45deg');
-            document.documentElement.style.setProperty('--top-before', '3px');
-            document.documentElement.style.setProperty('--top-after', '8px');
+            document.documentElement.style.setProperty('--angle', '-135deg');
+            document.documentElement.style.setProperty('--top-before', '6px');
+            document.documentElement.style.setProperty('--top-after', '11px');
         }, 1000)
     } else {
         e.target.parentNode.classList.remove("main-devices__hidden_animate-to")
         e.target.parentNode.classList.add("main-devices__hidden_animate-back") 
         setTimeout(function(){
-            e.target.textContent = "Скрыть"
-            document.documentElement.style.setProperty('--angle', '-135deg');
-            document.documentElement.style.setProperty('--top-before', '6px');
-            document.documentElement.style.setProperty('--top-after', '11px');
+          e.target.textContent = "Показать все" 
+            document.documentElement.style.setProperty('--angle', '45deg');
+            document.documentElement.style.setProperty('--top-before', '3px');
+            document.documentElement.style.setProperty('--top-after', '8px');
         }, 1000)
     }
 }
@@ -66,27 +66,26 @@ blockText.addEventListener("keydown", function(e) {
 
   
 function mobileSlider() {
-  if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
+  if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
    const mySwiper = new Swiper(slider, {
         // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    // loop: true,
+    slidesPerView: 'auto',
   
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      
     },
-
-    slidesPerView: 1,
+    spaceBetween: -8,
     });
     // window.location.reload()
     hidden.classList.add("none")
     slider.dataset.mobile = 'true';
   }
 
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 767) {
     slider.dataset.mobile = 'false';
     container.classList.remove("swiper")
     list.classList.remove("swiper-wrapper")
